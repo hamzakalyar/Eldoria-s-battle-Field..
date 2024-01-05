@@ -1,0 +1,11 @@
+﻿  CP  semester project.cpp
+C:\Users\FINE LAPTOP\source\repos.cpp\CP  semester project\CP  semester project\CP  semester project.cpp(87,6): warning C4101: 'menuLabel': unreferenced local variable
+C:\Users\FINE LAPTOP\source\repos.cpp\CP  semester project\CP  semester project\CP  semester project.cpp(199,6): warning C4101: 'back': unreferenced local variable
+C:\Users\FINE LAPTOP\source\repos.cpp\CP  semester project\CP  semester project\CP  semester project.cpp(262,6): warning C4101: 'come': unreferenced local variable
+C:\Users\FINE LAPTOP\source\repos.cpp\CP  semester project\CP  semester project\CP  semester project.cpp(366,6): warning C4101: 'go': unreferenced local variable
+C:\Users\FINE LAPTOP\source\repos.cpp\CP  semester project\CP  semester project\CP  semester project.cpp(785,13): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\FINE LAPTOP\source\repos.cpp\CP  semester project\CP  semester project\CP  semester project.cpp(794,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\FINE LAPTOP\source\repos.cpp\CP  semester project\CP  semester project\CP  semester project.cpp(878,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\FINE LAPTOP\source\repos.cpp\CP  semester project\CP  semester project\CP  semester project.cpp(963,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+C:\Users\FINE LAPTOP\source\repos.cpp\CP  semester project\CP  semester project\CP  semester project.cpp(1060,12): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  CP  semester project.vcxproj -> C:\Users\FINE LAPTOP\source\repos.cpp\CP  semester project\x64\Debug\CP  semester project.exe
