@@ -87,60 +87,61 @@ void Gamesetup() {
 	int menuLabel;
 
 menuLabel: // Label for goto statement
+	do {
+		Menu();
+		cin >> take;
+		if (cin.fail() || take < 0 || take > 5) {
+			cout << "\n\nInvalid input. Please enter a number between 0 and 5.\n" << endl;
+			cin.clear();
+			cin.ignore(numeric_limits<streamsize>::max(), '\n');
+			clearScreen();
+			goto menuLabel; // Jump back to the Menu
+		}
 
-	Menu();
-	cin >> take;
-	if (cin.fail() || take < 0 || take > 5) {
-		cout << "\n\nInvalid input. Please enter a number between 0 and 5.\n" << endl;
-		cin.clear();
-		cin.ignore(numeric_limits<streamsize>::max(), '\n');
 		clearScreen();
-		goto menuLabel; // Jump back to the Menu
-	}
-
-	clearScreen();
-	if (cin.eof())
-	{
-		cin.ignore(numeric_limits<streamsize>::max(), '\n');
-		clearScreen();
-		goto menuLabel;
-	}
+		if (cin.eof())
+		{
+			cin.ignore(numeric_limits<streamsize>::max(), '\n');
+			clearScreen();
+			goto menuLabel;
+		}
 
 
-	switch (take) {
-	case 1:
+		switch (take) {
+		case 1:
+			clearScreen();
+			Showquestsandbattle();
+			break;
+		case 2:
+			clearScreen();
+			showHighscore();
+			break;
+		case 3:
+			clearScreen();
+			difficulty = difficultyLevel(); // Set the difficulty
+			major_difficulty = difficulty;
+			clearScreen();
+			cout << "\n\n";
+			break;
+		case 4:
+			clearScreen();
+			displayInventory();
+			cout << "\n\n";
+			break;
+		case 5:
+			clearScreen();
+			Showstory();
+			break;
+		case 0:
+			exit(0);
+			break;
+		default:
+			clearScreen();
+			goto menuLabel; // Jump back to the Menu
+		}
 		clearScreen();
-		Showquestsandbattle();
-		break;
-	case 2:
-		clearScreen();
-		showHighscore();
-		break;
-	case 3:
-		clearScreen();
-		difficulty = difficultyLevel(); // Set the difficulty
-		major_difficulty = difficulty;
-		clearScreen();
-		cout << "\n\n";
-		break;
-	case 4:
-		clearScreen();
-		displayInventory();
-		cout << "\n\n";
-		break;
-	case 5:
-		clearScreen();
-		Showstory();
-		break;
-	case 0:
-		exit(0);
-		break;
-	default:
-		clearScreen();
-		goto menuLabel; // Jump back to the Menu
-	}
-	clearScreen();
-	goto menuLabel; // Loop back to the Menu after finishing a task
+		goto menuLabel; // Loop back to the Menu after finishing a task
+	} while (take != 0);
 }
 
 
@@ -1374,6 +1375,6 @@ void delayprint(const string& text, int milliseconds)
 	for (char ch : text)
 	{
 		cout << ch << flush; // Flush is a manipulator that ensures that the text is displayed immediatly without any buffer.
-		this_thread::sleep_for(chrono::milliseconds(milliseconds)); // Pre-build function to introduce delay
+		this_thread::sleep_for(chrono::milliseconds(milliseconds)); // Pre-build function to introduceÂ delay
 	}
 }
